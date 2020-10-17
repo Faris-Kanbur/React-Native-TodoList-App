@@ -8,13 +8,6 @@ Project aims to create TODO Application with React Native.
 
 - Your company has recently started on a project that aims to create a TODO Application for personal usage. So you and your colleagues have started to work on the project.
 
-## Expected Outcome
-
-![Project 000 Snapshot](./images/001.png)
-
-![Project 000 Snapshot](./images/002.png)
-
-![Project 000 Snapshot](./images/003.png)
 
 ### At the end of the project, following topics are to be covered;
 
