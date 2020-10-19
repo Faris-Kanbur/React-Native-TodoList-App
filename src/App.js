@@ -20,9 +20,29 @@ export default function App() {
   ]);
 
   const pressHandler = (key) => {
-    setTodos((prevTodos) => {
-      return prevTodos.filter((todo) => todo.key != key);
-    });
+    Alert.alert(
+      'Are you sure?',
+      'Would you like to delete it',
+
+      [
+        {
+          text: 'Ask me later',
+          onPress: () => console.log('Ask me later pressed'),
+        },
+        {
+          text: 'Cancel',
+          onPress: () => console.log('Cancel Pressed'),
+          style: 'cancel',
+        },
+        {
+          text: 'OK',
+          onPress: () =>
+            setTodos((prevTodos) => {
+              return prevTodos.filter((todo) => todo.key != key);
+            }),
+        },
+      ],
+    );
   };
 
   const submitHandler = (text) => {

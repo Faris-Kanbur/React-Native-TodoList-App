@@ -4,13 +4,13 @@ import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 
 export default function TodoItem({item, pressHandler}) {
   return (
-    <TouchableOpacity onPress={() => pressHandler(item.key)}>
-      <View style={styles.item}>
-        {/* <MaterialIcons name="delete" size={18} color="#ddd" /> */}
-        <Text style={styles.text}>{item.text}</Text>
+    <View style={styles.item}>
+      {/* <MaterialIcons name="delete" size={18} color="#ddd" /> */}
+      <Text style={styles.text}>{item.text}</Text>
+      <TouchableOpacity onPress={() => pressHandler(item.key)}>
         <Text style={styles.itemIcon}>🗑</Text>
-      </View>
-    </TouchableOpacity>
+      </TouchableOpacity>
+    </View>
   );
 }
 
@@ -26,21 +26,18 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     backgroundColor: '#fdd',
   },
-  itemIcon:{
+  itemIcon: {
     fontSize: 20,
     margin: 10,
     backgroundColor: '#ffd',
     padding: 7,
     borderRadius: 15,
-  
-
   },
-  text:{
+  text: {
     flex: 1,
     marginLeft: 10,
     marginTop: 15,
     fontFamily: 'times',
     fontSize: 20,
-
-  }
+  },
 });
